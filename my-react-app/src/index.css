@@ -66,6 +66,17 @@ a:hover {
   justify-content: center;
 }
 
+.project-card-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr;
+  margin-top: 40px;
+}
+
+.project-card-container img {
+  grid-row: 1 / span 2;
+}
+
 .grid-container-2 > * {
   flex: 1;
   margin: 0;
