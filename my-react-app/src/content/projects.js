@@ -1,4 +1,4 @@
-const projects = [
+const renovationProjects = [
   {
     id: 1,
     title: "Building 2",
@@ -13,6 +13,51 @@ const projects = [
     alt: "This is not actually an image",
     text: "This is a building that will be built someday if I am lucky, maybe, hopefully. Please!"
   },
+  {
+    id: 3,
+    title: "Next  building",
+    image: "https://picsum.photos/350/250",
+    alt: "This is not actually an image",
+    text: "This is the third building in this list"
+  },
+  {
+    id: 4,
+    title: "Building Invisible",
+    image: "https://picsum.photos/350/250",
+    alt: "This is not actually an image",
+    text: "I should not be able to see this"
+  },
 ];
 
-export default projects
+const residentialProjects = [
+  {
+    id: 1,
+    title: "Res Building 2",
+    image: "https://picsum.photos/350/250",
+    alt: "This is an image",
+    text: "This is a building that has been built"
+  },
+  {
+    id: 2,
+    title: "Res Building Amazing",
+    image: "https://picsum.photos/350/250",
+    alt: "This is not actually an image",
+    text: "This is a building that will be built someday if I am lucky, maybe, hopefully. Please!"
+  },
+  {
+    id: 3,
+    title: "Res Next  building",
+    image: "https://picsum.photos/350/250",
+    alt: "This is not actually an image",
+    text: "This is the third building in this list"
+  },
+  {
+    id: 4,
+    title: "Res Building Invisible",
+    image: "https://picsum.photos/350/250",
+    alt: "This is not actually an image",
+    text: "I should not be able to see this"
+  },
+];
+
+export default {renovationProjects, residentialProjects}

@@ -77,6 +77,11 @@ a:hover {
   grid-row: 1 / span 2;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .grid-container-2 > * {
   flex: 1;
   margin: 0;

@@ -1,18 +1,6 @@
 import React from "react";
+import ProjectSection from "./Projects/ProjectSection";
 import projects from "../content/projects";
-import ProjectCard from "./Projects/ProjectCard";
-
-function create(project) {
-  return (
-    <ProjectCard
-      key={project.id}
-      title={project.title}
-      image={project.image}
-      alt={project.alt}
-      text={project.text}
-    />
-  );
-}
 
 function ProjectsPage() {
   return (
@@ -24,7 +12,14 @@ function ProjectsPage() {
         <button>Commercial</button>
         <button>Current Projects</button>
       </div>
-      {projects.map(create)}
+      <ProjectSection 
+        section={projects.renovationProjects}
+        sectionName="renovations"
+      />
+      <ProjectSection 
+        section={projects.residentialProjects}
+        sectionName="residentials"
+      />
     </div>
   );
 }
