@@ -7,19 +7,23 @@ function ProjectsPage() {
     <div className="projects-page-container">
       <h2>Projects</h2>
       <div className="project-categories-container">
-        <button>Renovations</button>
-        <button>New Residential</button>
-        <button>Commercial</button>
-        <button>Current Projects</button>
+        <a href="#renovations">Renovations</a>
+        <a href="#residentials">New Residential</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#currentprojects">Current Projects</a>
       </div>
-      <ProjectSection 
-        section={projects.renovationProjects}
-        sectionName="renovations"
-      />
-      <ProjectSection 
-        section={projects.residentialProjects}
-        sectionName="residentials"
-      />
+      <div id="renovations">
+        <ProjectSection
+          section={projects.renovationProjects}
+          sectionName="renovations"
+        />
+      </div>
+      <div id="residentials">
+        <ProjectSection
+          section={projects.residentialProjects}
+          sectionName="residentials"
+        />
+      </div>
     </div>
   );
 }
