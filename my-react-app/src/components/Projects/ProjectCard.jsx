@@ -7,11 +7,11 @@ function ProjectCard(props) {
     return (
         <div className="project-card-container">
             <img src={props.image} alt={props.alt} onClick={() => {
-                setModalStyle({ display: "block" })
+                setModalStyle({ display: "flex" })
             }}/>
             <h3>{props.title}</h3>
             <p>{props.text}</p>
-            <ModalWindow style={modalStyle} updateStyle={setModalStyle} />
+            <ModalWindow style={modalStyle} updateStyle={setModalStyle} gallery={props.gallery} />
         </div>
     )
 }

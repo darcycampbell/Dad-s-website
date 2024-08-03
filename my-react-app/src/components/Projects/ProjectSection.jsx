@@ -16,6 +16,7 @@ function ProjectSection(props) {
               image={project.image}
               alt={project.alt}
               text={project.text}
+              gallery={project.gallery}
             />
           );
         }

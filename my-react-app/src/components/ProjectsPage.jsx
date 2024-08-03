@@ -18,12 +18,12 @@ function ProjectsPage() {
           sectionName="renovations"
         />
       </div>
-      <div id="residentials">
+      {/* <div id="residentials">
         <ProjectSection
           section={projects.residentialProjects}
           sectionName="residentials"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

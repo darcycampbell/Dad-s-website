@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {box-sizing:border-box}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -148,30 +150,37 @@ button:focus-visible {
 
 .modal {
   display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
+  position: relative;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+/*   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  height: 80%;
 }
 
 .close {
   color: #aaa;
-  float: right;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   font-size: 28px;
   font-weight: bold;
+  line-height: 0.4;
 }
 
 .close:hover,
@@ -180,6 +189,63 @@ button:focus-visible {
   text-decoration: none;
   cursor: pointer;
 }
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+div.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(26, 24, 24, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
