@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 function ProjectSection(props) {
-  const [show, setShow] = useState(3);
+  const [show, setShow] = useState(2 + props.modifier);
   const [pressed, setPressed] = useState(false);
 
   return (
     <div>
       {props.section.map((project) => {
-        if (project.id < show) {
+        if (project.id <= show) {
           return (
             <ProjectCard
               key={project.id}
@@ -17,6 +17,7 @@ function ProjectSection(props) {
               alt={project.alt}
               text={project.text}
               gallery={project.gallery}
+              galleryText={project.galleryText}
             />
           );
         }
@@ -28,7 +29,7 @@ function ProjectSection(props) {
             if (!pressed) {
               setShow(100);
             } else {
-              setShow(3);
+              setShow(2 + props.modifier);
             }
           }}
         >

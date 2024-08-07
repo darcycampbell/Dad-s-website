@@ -46,12 +46,7 @@ function Slideshow(props) {
             setText(false);
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut
-          placerat massa, ut pharetra orci. Morbi ultricies iaculis eros, a
-          vestibulum nibh suscipit non. In hac habitasse platea dictumst. Fusce
-          interdum lectus lobortis nisi scelerisque, sed dignissim velit
-          molestie. Aenean in lacus in tortor pharetra pretium vel a ligula.
-          Duis.
+          {props.galleryText}
         </p>
       </div>
       <SlideButton

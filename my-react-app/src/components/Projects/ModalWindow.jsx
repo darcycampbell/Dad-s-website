@@ -15,7 +15,7 @@ function ModalWindow(props) {
     <div className="modal" style={props.style}>
       <div class="modal-content">
         <CloseButton updateStyle={props.updateStyle} />
-        <Slideshow gallery={props.gallery} />
+        <Slideshow gallery={props.gallery} galleryText={props.galleryText} />
       </div>
     </div>
   );

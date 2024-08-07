@@ -3,6 +3,13 @@ import ProjectSection from "./Projects/ProjectSection";
 import projects from "../content/projects";
 
 function ProjectsPage() {
+  const renovationProjects = projects.filter((project) => {
+    return project.category === "renovation"; 
+  });
+  const residentialProjects = projects.filter((project) => {
+    return project.category === "residential"; 
+  });
+
   return (
     <div className="projects-page-container">
       <h2>Projects</h2>
@@ -14,16 +21,18 @@ function ProjectsPage() {
       </div>
       <div id="renovations">
         <ProjectSection
-          section={projects.renovationProjects}
+          section={renovationProjects}
           sectionName="renovations"
+          modifier={0}
         />
       </div>
-      {/* <div id="residentials">
+      <div id="residentials">
         <ProjectSection
-          section={projects.residentialProjects}
+          section={residentialProjects}
           sectionName="residentials"
+          modifier={renovationProjects.length}
         />
-      </div> */}
+      </div>
     </div>
   );
 }
