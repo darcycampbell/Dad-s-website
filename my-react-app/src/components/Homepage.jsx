@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DownArrow from "./DownArrow";
 
 function Homepage() {
@@ -19,6 +20,7 @@ function Homepage() {
             Nullam et fermentum sem, sit amet imperdiet libero. Nulla interdum
             rutrum eros, a tincidunt libero malesuada at. Nullam ac lacus.
           </p>
+          <Link to="/About">Read more...</Link>
           <div className="button-container">
             <button>Services</button>
             <button>Contact</button>

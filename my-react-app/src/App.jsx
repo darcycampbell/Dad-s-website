@@ -1,38 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
-import Homepage from "./components/Homepage";
-import ProjectsPage from "./components/ProjectsPage";
+import LandingPage from "./components/LandingPage";
+import AboutPage from "./components/AboutPage";
+import ScrollToTop from "./components/ScrollToTop";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [buttonStyle, setButtonStyle] = useState({ display: "none" });
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
-      ) {
-        setButtonStyle({ display: "block" });
-      } else {
-        setButtonStyle({ display: "none" });
-      }
-    });
-  });
-
+  
   return (
     <div className="main-container">
-      <Homepage />
-      <ProjectsPage />
-      <button
-        onClick={() => {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }}
-        id="goToTopButton"
-        style={buttonStyle}
-      >
-        Top
-      </button>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/About" element={<AboutPage />} />
+      </Routes>
+      <ScrollToTop />
     </div>
   );
 }
