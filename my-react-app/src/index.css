@@ -62,8 +62,13 @@ body {
   height: 100vh;
 }
 
+.home-page-container .textbox {
+  background-color: rgba(206, 150, 108, 0.788);
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
 .grid-container {
-  background-color: rgba(206, 190, 178, 0.808);
   position: absolute;
   left: 5%;
   bottom: 2%;
@@ -73,8 +78,17 @@ body {
   grid-template-columns: 70% 30%;
   grid-template-rows: 20% 80%;
   padding: 12px;
-  border-radius: 10px;
-  border: 2px solid white;
+  z-index: 1;
+}
+
+.home-page-container .sub-container {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  width: 15%;
+  height: 35%;
+  padding: 6px;
+  z-index: 0.9;
 }
 
 #intro-heading {
